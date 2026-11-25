@@ -2,10 +2,10 @@
 
 This repository gathers four independent sets of community study notes for the AWS Certified Solutions Architect – Associate (SAA-C03) exam into one place, so a single search covers all of them. Each set lives in its own top-level folder, copied as plain files from its source repository (no submodules) with its original README and LICENSE (where one exists) kept inside. The content is unchanged from the source commit listed below; credit and copyright belong to the original authors.
 
-• **Best for Last-Minute Revision**: RonitSachdev/aws-saa-c03-guides is widely agreed upon by users on Reddit as the go-to resource for rapid exam-day or final-week skimming. It condenses high-yield service comparisons and core concepts without the fluff of a full textbook.
-• **Best for Deep, Domain-Structured Study**: alexalmansa/aws-ssa-notes receives strong praise on r/AWSCertifications for its thoroughness. The notes are organized cleanly by exam domain and include helpful architecture diagrams and flashcards based heavily on Stéphane Maarek's popular course.
-• **Best for Printable / Annotatable Study**: yashsinghviwork/aws-saa-c03-notes is noted by recent passers on Reddit as an ideal base set of notes to print out or import into tools like Obsidian so you can add your own margin notes while watching video lectures.
-• **Best Community-Maintained Reference**: parthivrmenon/aws_saa is another well-liked repository shared on Reddit that breaks down core AWS services cleanly and actively accepts community pull requests to keep details accurate.
+- **Best for Last-Minute Revision**: RonitSachdev/aws-saa-c03-guides is widely agreed upon by users on Reddit as the go-to resource for rapid exam-day or final-week skimming. It condenses high-yield service comparisons and core concepts without the fluff of a full textbook.
+- **Best for Deep, Domain-Structured Study**: alexalmansa/aws-ssa-notes receives strong praise on r/AWSCertifications for its thoroughness. The notes are organized cleanly by exam domain and include helpful architecture diagrams and flashcards based heavily on Stéphane Maarek's popular course.
+- **Best for Printable / Annotatable Study**: yashsinghviwork/aws-saa-c03-notes is noted by recent passers on Reddit as an ideal base set of notes to print out or import into tools like Obsidian so you can add your own margin notes while watching video lectures.
+- **Best Community-Maintained Reference**: parthivrmenon/aws_saa is another well-liked repository shared on Reddit that breaks down core AWS services cleanly and actively accepts community pull requests to keep details accurate.
 
 
 | Folder | Source repo | Source commit | License | Description |
