@@ -1,44 +1,34 @@
-# AWS Solutions Architect Associate (SAA-C03) — Complete Topic Guides
+# AWS SAA-C03 Study Guides — Combined Collection
 
-**38 exam-focused study guides covering the entire SAA-C03 syllabus** — written the way a good teacher explains, not the way documentation reads.
+This repository gathers four independent sets of community study notes for the AWS Certified Solutions Architect – Associate (SAA-C03) exam into one place, so a single search covers all of them. Each set lives in its own top-level folder, copied as plain files from its source repository (no submodules) with its original README and LICENSE (where one exists) kept inside. The content is unchanged from the source commit listed below; credit and copyright belong to the original authors.
 
-> Battle-tested on a successful exam attempt — shared in the hope they help you pass too. 🎉
+| Folder | Source repo | Source commit | License | Description |
+|---|---|---|---|---|
+| [`ronitsachdev-aws-saa-c03-guides/`](ronitsachdev-aws-saa-c03-guides/) | [RonitSachdev/aws-saa-c03-guides](https://github.com/RonitSachdev/aws-saa-c03-guides) | [`a71e466`](https://github.com/RonitSachdev/aws-saa-c03-guides/tree/a71e466f02702fe01a6fe414c0b49cb8a673d205) | CC BY 4.0 (LICENSE file; GitHub shows "Other") | An index plus 37 topic guides, each with analogies, exam traps, question patterns and a pocket card |
+| [`parthivrmenon-aws_saa/`](parthivrmenon-aws_saa/) | [parthivrmenon/aws_saa](https://github.com/parthivrmenon/aws_saa) | [`60858e2`](https://github.com/parthivrmenon/aws_saa/tree/60858e22fc901530797fb827ab1f4e5c4740908d) | CC BY 4.0 (LICENSE file; GitHub shows "Other") | 35 numbered Markdown chapters following the course order, from IAM to whitepapers |
+| [`yashsinghviwork-aws-saa-c03-notes/`](yashsinghviwork-aws-saa-c03-notes/) | [yashsinghviwork/aws-saa-c03-notes](https://github.com/yashsinghviwork/aws-saa-c03-notes) | [`e2d0c84`](https://github.com/yashsinghviwork/aws-saa-c03-notes/tree/e2d0c84422d6c025ad3a190edf0fe814c79d1cd0) | No license | 25 Markdown chapters (Obsidian-style) based on Stephane Maarek's course, plus PDF exports |
+| [`alexalmansa-aws-ssa-notes/`](alexalmansa-aws-ssa-notes/) | [alexalmansa/aws-ssa-notes](https://github.com/alexalmansa/aws-ssa-notes) | [`be62671`](https://github.com/alexalmansa/aws-ssa-notes/tree/be62671a460d87a274eb1a6a52a24ca66d1e6318) | No license | ~50 per-service Obsidian notes with a cheat sheet, master index and diagrams |
 
-## What makes these different
+## Searching across all four
 
-Every guide follows the same battle-tested format:
+From a local clone:
 
-1. **The idea** — each service explained *from zero* with a real-world analogy (Multi-AZ = a spare tire, Read Replicas = extra checkout lanes, Route 53 = a phonebook, NAT = a receptionist mailing your letters…)
-2. **Core concepts** — the exam-tested facts and numbers, with explicit **"THE trap"** callouts for the mistakes the exam is designed to harvest
-3. **Question patterns** — realistic exam-style scenarios with the answer *and the signal keywords that crack them*
-4. **Pocket card** — a keyword → answer table for rapid review
+```sh
+# Which files mention S3 Glacier, in any of the four sets?
+grep -ril "s3 glacier" .
 
-The guides teach the *decision patterns* the exam actually tests ("Multi-AZ vs Read Replica", "Gateway vs Interface Endpoint", "SQS vs SNS vs Kinesis vs EventBridge") — not service trivia in isolation.
+# Show matching lines with file names, Markdown only
+grep -rin --include='*.md' "transit gateway" .
 
-## Start here
+# Search a single set
+grep -ril "aurora global" alexalmansa-aws-ssa-notes/
+```
 
-📖 **[Topic Guides Index](topic-guides/00-README.md)** — all 38 guides with a suggested reading order grouped by exam weight.
+On GitHub, scope [code search](https://github.com/search?type=code) to this repo with the `repo:` qualifier, and narrow to one folder with `path:`:
 
-The heavy hitters, if you're short on time:
-- [VPC](topic-guides/06-VPC.md) — the single biggest exam topic
-- [S3](topic-guides/02-S3.md) — storage classes, encryption, the works
-- [RDS & Aurora](topic-guides/09-RDS-Aurora.md) — home of the most-tested distinction on the exam
-- [SQS, SNS & Kinesis](topic-guides/17-SQS-SNS-Kinesis.md) — the messaging block
-- [Exam Traps & Key Patterns](topic-guides/36-Exam-Traps-KeyPatterns.md) — ⭐ read this last, and again on exam morning
+```
+repo:jvillalobos22/aws-saa-c03-guides "s3 glacier"
+repo:jvillalobos22/aws-saa-c03-guides path:parthivrmenon-aws_saa "kinesis"
+```
 
-## Exam-technique rules
-
-1. **Read the last sentence of the question first** — "MOST cost-effective" vs "LEAST operational overhead" vs "highly available" decides between the two plausible finalists.
-2. **Count the requirements** — "X *as well as* Y" is a checklist; the right answer ticks every box. Half-solutions are planted for people who stop at the first match.
-3. **Scan options for poison qualifiers** — *serverless, automatically, at no cost, immediately, directly, cannot/always* — a true fact welded to one false word is the exam's favorite distractor.
-4. **When two options are twins**, the entire question lives in the differing clause.
-5. **Requirements are eliminators, not decoration** — a stated number (retrieval time, IOPS, RPO/RTO) exists to kill specific options. Eliminate first, then pick the cheapest/most-managed survivor.
-6. **When every familiar option is wrong-scope, the unfamiliar one is the answer** — real-but-unknown features sound specific and boring; fabricated ones sound grand and vague.
-
-## Disclaimer
-
-Community study notes — not affiliated with or endorsed by AWS. Accurate to the SAA-C03 exam as of mid-2026; always cross-check details that matter against current AWS documentation.
-
-## License
-
-[CC BY 4.0](LICENSE) — you're free to use, share, and adapt these guides, **but you must give credit**: mention **RonitSachdev** and link back to this repository in anything you build from them. If these helped you pass, a ⭐ on the repo is appreciated too.
+GitHub code search only indexes the default branch, and does not search inside the PDF files.
